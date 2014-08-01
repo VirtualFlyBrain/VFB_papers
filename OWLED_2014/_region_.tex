@@ -1,0 +1,81 @@
+\message{ !name(VFB_owled2014.tex)}
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+%\usepackage{hyphenat} see
+%http://www.ctan.org/tex-archive/macros/latex/contrib/hyphenat - would
+%be good to enable this to prevent hyphenation of OWL MS statements.
+%Or find alternative
+
+\usepackage{url}
+\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
+\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\message{ !name(VFB_owled2014.tex) !offset(254) }
+
+
+We treat expression patterns as anatomical structures defined as the
+mereological sum of all cells that express a particular gene or
+transgene. For all individual images of neurons, expression patterns
+and neuron clones, we record what is being expressed, but individual
+neurons and clones are typically fragments of expression patterns.
+Users would find it very unintuitive if queries for expression
+patterns mixed in images of expression pattern fragments.   But once
+an expression pattern has been found, it is useful to get a list of
+components.  
+
+
+We define expresses using slightly more expressive logic than OWL can cope with:
+\begin{quote} 
+x \textbf{expresses} y iff: 
+x \textbf{has\_part} some cell
+For all cell(c) and \textbf{part\_of} y: (`gene expression' \textit{and} \textbf{has\_product} \textit{some} y) \textbf{occurs\_in} c
+\end{quote}
+
+An expression pattern of a gene/transgene can then be defined and its
+partonomy populated using the pattern:
+
+\begin{quote} 
+gene B expression pattern
+\textit{EquivalentTo}: `expression pattern' \textit{that}
+\textbf{expresses} \textit{some} `gene B'
+\textit{GCI}: \textbf{expresses} \textbf{some} gene B \textit{EquivalentTo} \textbf{part\_of} \textit{some} 'B expression pattern'
+\end{quote}
+
+ 
+Future versions of VFB are likely to use OWL versions of annotations, generated from the database, in the form of \textit{subClassOf} axioms asserting \textbf{overlaps} on gene expression classes.
+
+e.g. 
+\begin{quote} 
+`expression pattern of gene B' \textit{subClassOf} \textbf{overlaps} \textit{some} `fan-shaped body'
+\end{quote}
+
+
+
+\message{ !name(VFB_owled2014.tex) !offset(580) }
+
+\end{document}

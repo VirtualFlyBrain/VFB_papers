@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{Costa2013}
+Marta Costa, Simon Reeve, Gary Grumbling, and David Osumi-Sutherland.
+\newblock {The Drosophila anatomy ontology.}
+\newblock {\em Journal of biomedical semantics}, 4(1):32, January 2013.
+
+\bibitem{kazakov2012elk}
+Yevgeny Kazakov, Markus Kr{\"o}tzsch, and Franti{\v{s}}ek Siman{\v{c}}{\'\i}k.
+\newblock Elk reasoner: Architecture and evaluation.
+\newblock {\em CEUR Workshop Proceedings}, 858, 2012.
+
+\bibitem{pmid22180411}
+N.~Milyaev, D.~Osumi-Sutherland, S.~Reeve, N.~Burton, R.~A. Baldock, and J.~D.
+  Armstrong.
+\newblock {{T}he {V}irtual {F}ly {B}rain browser and query interface}.
+\newblock {\em Bioinformatics}, 28(3):411--415, Feb 2012.
+
+\bibitem{pmid22402613}
+D.~Osumi-Sutherland, S.~Reeve, C.~J. Mungall, F.~Neuhaus, A.~Ruttenberg, G.~S.
+  Jefferis, and J.~D. Armstrong.
+\newblock {{A} strategy for building neuroanatomy ontologies}.
+\newblock {\em Bioinformatics}, 28(9):1262--1269, May 2012.
+
+\bibitem{ZNCH14a}
+Yujiao Zhou, Yavor Nenov, Bernardo {Cuenca Grau}, and Ian Horrocks.
+\newblock Pay-as-you-go {OWL} query answering using a triple store.
+\newblock In {\em Proc.\ of the 28th Nat.\ Conf.\ on Artificial Intelligence
+  (AAAI~14)}, 2014.
+
+\end{thebibliography}
