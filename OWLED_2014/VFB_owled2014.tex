@@ -80,15 +80,15 @@ Brain (VFB; http://www.virtualflybrain.org) is a popular, OWL-based resource
 providing neuroinformatics support for this work.  Here we present
 details of the current use of OWL on VFB  - underlying tools for
 searching and querying across curated information from the literature
-in combination with information mined from bulk data sets. 
+in combination with information mined from bulk data sets.
 
-In order to keep reasoning fast and scaleable, we have, up to now, restricted
+In order to keep reasoning fast and scalable, we have, up to now, restricted
 expressiveness to the EL profile of OWL and used the ELK reasoner. As a result,
 we have been unable to provide queries involving negation, despite
 there being cases where there is clear
 user demand and sufficient information to support these
-queries. Recent developments in reasoning technology may 
-make these queries practical. We present ontology design patterns to 
+queries. Recent developments in reasoning technology may
+make these queries practical. We present ontology design patterns to
 support the queries with negation that our users want.
 
 \keywords{OWL, neurobiology, neuron, DL reasoning, negation, closure
@@ -101,7 +101,7 @@ support the queries with negation that our users want.
 \subsection{Mapping and genetically dissecting the \textit{Drosophila}
   nervous system}
 
-  
+
 A massive effort is underway to map the neural circuitry of the
 \textit{Drosophila} nervous system and to genetically dissect its
 function. New microscopy and image analysis techniques are
@@ -180,12 +180,12 @@ thousands of annotations are available from these queries.
 % The DAO has many axioms referencing Gene Ontology biological process
 % classes via a \textbf{capable\_of} object property as a means of
 % recording function in behaviour, sensory perception and
-% neurophysiological processes. 
+% neurophysiological processes.
 
 % % Phenotype ontology
-  
 
-\section{OWL queries and design patterns for neuroanatomy} 
+
+\section{OWL queries and design patterns for neuroanatomy}
 
 The DAO uses an integrated set of relations and design patterns to
 classify neurons according to their location, connectivity, lineage
@@ -216,7 +216,7 @@ EquivalentClass expressions.
 
 Central to the basic mereological reasoning on VFB is an
 \textbf{overlaps} relation defined using \textbf{part\_of} and its
-inverse \textbf{has\_part} 
+inverse \textbf{has\_part}
 
 \begin{quote}
 X \textbf{overlaps} Y iff: \textit{exists some} Z \textit{and}
@@ -235,7 +235,8 @@ Z\footnote{\textbf{part\_of} and \textbf{has\_part} are both
 
 \textbf{overlaps} \textit{o} \textbf{part\_of} \textit{subPropertyOf} \textbf{overlaps}
 
-\textbf{has\_part} \textit{o} \textbf{overlaps} \textit{subPropertyOf} \textbf{overlaps}\end{quote}
+\textbf{has\_part} \textit{o} \textbf{overlaps} \textit{subPropertyOf}
+\textbf{overlaps}\end{quote}
 
 The property chains allow inference over partonomy.  This is central
 to the function of the query system on VFB - allowing queries for
@@ -251,12 +252,13 @@ property chains, allowing queries from any level of the partonomy.
 For example:
 
 \begin{quote}
-\textbf{has\_synaptic\_terminal\_in} \textit{o} \textbf{part\_of} \textit{subPropertyOf} \textbf{has\_synaptic\_terminal\_in}
+\textbf{has\_synaptic\_terminal\_in} \textit{o} \textbf{part\_of} \textit{subPropertyOf}
+\textbf{has\_synaptic\_terminal\_in}
 
 \textbf{has\_part} \textit{o} \textbf{has\_synaptic\_terminal\_in} \textit{subPropertyOf}
 \textbf{has\_synaptic\_terminal\_in}
 \end{quote}
- 
+
 VFB also provides combinatorial query functionality, via its
 query builder tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}}
 allowing users to query for neurons based on their pattern of
@@ -300,25 +302,25 @@ patterns (\textgreater 3500). As for painted brain regions, structures
 depicted in these images are modelled as OWL individuals.
 Importantly, all of these images are registered (morphed) onto the
 standard brain. This allows direct comparison - both automated and
-manual  - of registered images. 
+manual  - of registered images.
 
 From image analysis, we can determine which gross brain regions a
-neuron, clone or expression pattern \textit{overlaps}, recording this 
+neuron, clone or expression pattern \textit{overlaps}, recording this
 using a \textit{Type} statement on the individual.  These drive queries for
 single neuron images by location (figure
 \ref{fig:Query_menus_DL_images}). A more sophisticated form of image
-analysis, developed by G Jefferis [REF preprint], compares pairs of 
+analysis, developed by G Jefferis [REF preprint], compares pairs of
 neurons,  giving each pair a score for similarity of morphology and
 location.  A clustering algorithm is then used to group neurons with
 similar morphology and location and to assign an exemplar neuron for
-each cluster.  
+each cluster.
 
 We treat clusters as individuals, with single neurons standing in a
 \textbf{member\_of} relationship to a cluster.  A subproperty of
 \textbf{member\_of}, \textbf{exemplar\_of}, is used to relate
 exemplars to clusters.  This simple formalism allows VFB to group the
 very large numbers of images that often result from queries of brain
-regions for ovelapping neurons into a much smaller number of clusters
+regions for overlapping neurons into a much smaller number of clusters
 of similar neurons (see figure \ref{fig:Query_menus_DL_images}).
 
 In many cases, the resulting clusters correspond largely or completely
@@ -340,16 +342,16 @@ We treat expression patterns as anatomical structures defined as the
 mereological sum of all cells that express a particular gene or
 transgene. We record the expressed gene or transgene shown in all
 images, including those of neurons and neuron clones as well as
-expression patterns.  But individual neurons and clones are typically 
+expression patterns.  But individual neurons and clones are typically
 fragments of expression patterns. Users would find it very unintuitive
 if queries for expression patterns mixed in images of expression
-pattern fragments.   But once an expression pattern has been found, 
+pattern fragments.   But once an expression pattern has been found,
 it is useful to be able to get a list of component parts.
 
 We define \textbf{expresses} using slightly more expressive logic than OWL can
 cope with:
 
-\begin{quote} 
+\begin{quote}
 x \textbf{expresses} y iff:  x \textbf{has\_part} \textit{some} cell \textit{and}
 for all cell(c) and \textbf{part\_of} y: (`gene expression'
 \textit{and} \textbf{has\_product} \textit{some} y)
@@ -359,20 +361,22 @@ for all cell(c) and \textbf{part\_of} y: (`gene expression'
 An expression pattern of a gene/transgene can then be defined and its
 partonomy populated using the pattern:
 
-\begin{quote} 
+\begin{quote}
 `gene B expression pattern'
-\textit{EquivalentTo}: `expression pattern' \textit{that} \textbf{expresses} \textit{some} `gene B'\end{quote}
-\begin{quote} \textit{GCI}: \textbf{expresses} \textbf{some} `gene B' \textit{EquivalentTo} \textbf{part\_of} \textit{some} `B expression pattern'
+\textit{EquivalentTo}: `expression pattern' \textit{that} \textbf{expresses} \textit{some} `gene
+B'\end{quote}
+\begin{quote} \textit{GCI}: \textbf{expresses} \textbf{some} `gene B' \textit{EquivalentTo}
+\textbf{part\_of} \textit{some} `B expression pattern'
 \end{quote}
 
 % ADD EXAMPLE
- 
+
 This system is currently used on VFB to provide images of transgene
 expression patterns found via SQL queries. The above formalisation
 provides an obvious way to convert the semi-formalised annotations in
 SQL to OWL
 
-For brain regions: 
+For brain regions:
 
 `expression pattern of X' \textbf{overlaps} \textit{some} `brain region Y'
 
@@ -393,14 +397,14 @@ make safe queries for expression patterns involving negation possible.
 
 %\begin{quote}
 %'ALad1 lineage neuron'
-%\textit{EquivalentTo}: 
+%\textit{EquivalentTo}:
 %neuron and (\textbf{develops\_from} \textit{some} `neuroblast ALad1')
 
 %\textit{subClassOf}: \textbf{part\_of} \textit{some} `adult ALad1 lineage clone'
 %\end{quote}
-% 
+%
 
- 
+
 \section{Beyond EL: supporting queries with negation.}
 
 In order to remain computationally tractable and scalable, VFB
@@ -433,7 +437,7 @@ example, the neuron DL1 adPN fasciculates with only one tract, the
 iACT.  We currently record this as:
 
 
-\begin{quote} 
+\begin{quote}
 `DL1 adPN' \textit{subClassOf} \textbf{fascicualtes\_with} \textit{some} iACT
 \end{quote}
 
@@ -446,7 +450,7 @@ But if we also have the axioms:
 \end{quote}
 
 Then we can find 'DL1 adPN' with the query:
-\begin{quote} 
+\begin{quote}
 	neuron \textit{and not} (\textbf{fascicualtes\_with} \textit{some} `great commissure')
 \end{quote}
 
@@ -461,13 +465,14 @@ this pattern of closure axioms for many important relations used in querying.  F
 
 X \textbf{overlaps} \textit{some} Y
 
-X \textbf{overlaps} \textit{only} Y 
+X \textbf{overlaps} \textit{only} Y
 
 Y \textbf{part\_of} \textit{some} Z
 
 Z \textit{disjointWith} X
 
-=\textgreater inconsistency: X \textbf{overlaps} \textit{some} Z, X not (\textbf{overlaps} \textit{some} Z)
+=\textgreater inconsistency: X \textbf{overlaps} \textit{some} Z, X not (\textbf{overlaps}
+\textit{some} Z)
 \end{quote}
 
 
@@ -477,7 +482,7 @@ disjointness between brain regions (which also provide a useful
 integrity check). Spatial disjointness can be declared using a simple
 GCI:
 
-\begin{quote} 
+\begin{quote}
 \textbf{part\_of} \textit{some} X \textit{disjointWith} \textbf{part\_of} \textit{some} Y
 \end{quote}
 
@@ -486,7 +491,7 @@ synaptic terminals in DL1v(part of the antennal lobe) and the lateral
 horn\footnote{There is  actually one additional region, but we
   simplify here in order to  provide a more compact example} with:
 
-\begin{quote} 
+\begin{quote}
 `DL1 adPN'
 
 \textit{subClassOf}: \textbf{has\_synaptic\_terminals\_in}
@@ -511,10 +516,11 @@ spatially disjoint , DL1 adPN is returned by the query:
 \begin{quote}
 neuron that (\textbf{has\_synaptic\_terminal\_in} \textit{some}
 `antennal lobe') and not (\textbf{has\_synaptic\_terminal\_in}
-\textit{some} `fan-shaped body') 
+\textit{some} `fan-shaped body')
 \end{quote}
 
-An explanation is shown in figure \ref{fig:combined_explanation}B).  There is no need to assert \textbf{has\_part} relationships. The
+An explanation is shown in figure \ref{fig:combined_explanation}B).  There is no need to
+assert \textbf{has\_part} relationships. The
 \textit{inverseOf} axiom between \textbf{has\_part} and
 \textbf{part\_of} is sufficient to infer not \textbf{has\_part} from
 spatial disjointness axioms (figure \ref{fig:combined_explanation}A).
@@ -546,9 +552,9 @@ come with explicit assertions about regions not overlapped.  For
 example, the largest transgene expression dataset that VFB currently
 hosts [Ref Jennett] was provided with annotations recording the
 presence or absence of expression in every major neuropil in the adult
-brain.  These can easily be translated programatically into restriction axioms
+brain.  These can easily be translated programmatically into restriction axioms
 asserting \textbf{overlaps} and \textit{not} \textbf{overlaps} on
-expression pattern classes. % TODO  (fig \cite{fig:} shows an example.) 
+expression pattern classes. % TODO  (fig \cite{fig:} shows an example.)
 
 \section{Discussion and future directions}
 
@@ -587,7 +593,7 @@ combining triple store based RL reasoning with a HermiT DL reasoner
 for compound queries with negation for test datasets using the design
 patterns outlined in this paper.
 
-A more cleaerly sumountable barrier is the lack of tooling support for
+A more clearly surmountable barrier is the lack of tooling support for
 some of the axiomatisation required in the design patterns we propose.  In
 particular, adding GCIs to record spatial disjointness is currently
 very tedious to do by hand in Protege 5.  This may be achievable by
@@ -605,9 +611,11 @@ For details of construction and maintenance of the \textit{Drosophila}
 anatomy ontology please see Costa et al., 2013 \cite{Costa2013}. The
 ontology is available from \url{http://purl.obolibrary.org/obo/fbbt}
 
-VFB is an open source project.  All code is available from \url{https://github.com/VirtualFlyBrain}
-OWL individuals files used on VFB are available from 
-\url{https://github.com/VirtualFlyBrain/VFB_owl/tree/master/src/owl} % TODO - add README.md to this page.
+VFB is an open source project.  All code is available from
+\url{https://github.com/VirtualFlyBrain}
+OWL individuals files used on VFB are available from
+\url{https://github.com/VirtualFlyBrain/VFB_owl/tree/master/src/owl} % TODO - add
+README.md to this page.
 
 A test ontology illustrating implementation of the DL patterns for
 negative queries can be found here: TBA!
@@ -624,7 +632,7 @@ project cen be found at
 
 
 \subsection{Database representation of OWL individuals}
- 
+
 Details of individuals are maintained in a SQL database
 (\url{https://github.com/VirtualFlyBrain/VFB_owl/wiki/Individuals-DB})
 and programmatically converted to OWL via scripting over the OWL-API
@@ -640,11 +648,11 @@ The OWL design patterns and queries presented in this paper were designed and
 tested by DOS  He also designed the database representation of OWL
 individuals and wrote the code the translates this representation into
 OWL.  The portion of the DAO representing neuroanatomy was built by
-DOS and MC.  MC and GJ were responsibile for all annotation,
+DOS and MC.  MC and GJ were responsible for all annotation,
 processing and analysis of images. GJ developed the clustering
-algorithm and had the idea of assigning examplars to clusters.
+algorithm and had the idea of assigning exemplars to clusters.
 
-\subsection*{Acknowledgments.} 
+\subsection*{Acknowledgments.}
 
 We thank Simon Reeve for his contributions to the representation of
 neuroanatomy in the DAO.  We thank Nestor Milyaev for his work on the
