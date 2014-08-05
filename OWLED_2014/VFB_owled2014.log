@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.30)  3 AUG 2014 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.30)  5 AUG 2014 06:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -175,18 +175,18 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (./VFB_owled2014.aux)
 \openout1 = `VFB_owled2014.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
@@ -248,12 +248,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 82.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+LaTeX Font Info:    Try loading font information for U+msb on input line 82.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -261,150 +261,178 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 161.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 174.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 161.
- [2]
-Overfull \hbox (10.12709pt too wide) in paragraph at lines 200--208
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 174.
+
+Overfull \hbox (7.73076pt too wide) in paragraph at lines 164--178
+\OT1/cmr/m/it/10 Drosophila \OT1/cmr/m/n/10 anatomy on-tol-ogy (DAO) [2], an OW
+L on-tol-ogy of \OT1/cmr/m/it/10 Drosophila \OT1/cmr/m/n/10 anatomy,
+ []
+
+
+Overfull \hbox (8.87715pt too wide) in paragraph at lines 164--178
+\OT1/cmr/m/n/10 tual com-po-nent in the form of ref-er-enced syn-onym lists and
+ def-i-ni-tions/descriptions
+ []
+
+[2]
+Overfull \hbox (10.12709pt too wide) in paragraph at lines 202--210
 []\OT1/cmr/m/n/10 The typ-i-cal mere-o-log-i-cal re-la-tion-ship be-tween a neu
 -ron and gross neu-roanatomy
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 226--226
+Underfull \hbox (badness 1152) in paragraph at lines 228--228
  [][]\OT1/cmr/bx/n/9 part[]of \OT1/cmr/m/n/9 and \OT1/cmr/bx/n/9 has[]part \OT1
 /cmr/m/n/9 are both tran-si-tive and re-flex-ive; \OT1/cmr/bx/n/9 part[]of \OT1
 /cmr/m/it/9 in-verseOf
  []
 
 
-Overfull \hbox (46.691pt too wide) in paragraph at lines 254--255
+Overfull \hbox (46.691pt too wide) in paragraph at lines 257--259
 []\OT1/cmr/bx/n/10 has[]synaptic[]terminal[]in \OT1/cmr/m/it/10 o \OT1/cmr/bx/n
 /10 part[]of \OT1/cmr/m/it/10 sub-Prop-er-tyOf \OT1/cmr/bx/n/10 has[]synaptic[]
 terminal[]in 
  []
 
-[3]
-Overfull \hbox (52.85205pt too wide) in paragraph at lines 256--258
+
+Overfull \hbox (52.85205pt too wide) in paragraph at lines 260--262
 []\OT1/cmr/bx/n/10 has[]part \OT1/cmr/m/it/10 o \OT1/cmr/bx/n/10 has[]synaptic[
 ]terminal[]in \OT1/cmr/m/it/10 sub-Prop-er-tyOf \OT1/cmr/bx/n/10 has[]synaptic[
 ]terminal[]in 
  []
 
-<images/Query_menus_DL_images.png, id=23, 649.9482pt x 452.892pt>
+[3] <images/Query_menus_DL_images.png, id=25, 647.5392pt x 465.4188pt>
 File: images/Query_menus_DL_images.png Graphic file (type png)
 
 <use images/Query_menus_DL_images.png>
 Package pdftex.def Info: images/Query_menus_DL_images.png used on input line 27
-3.
-(pdftex.def)             Requested size: 341.43306pt x 237.91698pt.
+7.
+(pdftex.def)             Requested size: 341.43306pt x 245.40668pt.
  [4 <./images/Query_menus_DL_images.png>]
-Overfull \hbox (3.5138pt too wide) in paragraph at lines 297--304
+Overfull \hbox (3.5138pt too wide) in paragraph at lines 305--312
 []\OT1/cmr/m/n/10 VFB also in-cor-po-rates large datasets of 3D im-ages of sin-
 gle neu-rons (\OML/cmm/m/it/10 >\OT1/cmr/m/n/10 16,000),
  []
 
 [5] [6]
-Overfull \hbox (6.97757pt too wide) in paragraph at lines 474--479
+Overfull \hbox (6.97757pt too wide) in paragraph at lines 466--471
 []\OT1/cmr/m/n/10 We can get around this by us-ing clo-sure ax-ioms of the form
  ``\OT1/cmr/bx/n/10 rel \OT1/cmr/m/it/10 only \OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10
  has[]part
  []
 
 [7]
-Overfull \hbox (5.87305pt too wide) in paragraph at lines 522--524
+Overfull \hbox (5.87305pt too wide) in paragraph at lines 515--517
 []\OT1/cmr/m/n/10 This pat-tern is also de-pen-dent on the re-flex-ive na-ture 
 of \OT1/cmr/bx/n/10 part[]of \OT1/cmr/m/n/10 and \OT1/cmr/bx/n/10 has[]part
  []
 
-<images/combined_explanation.png, id=40, 688.974pt x 346.4142pt>
+<images/combined_explanation.png, id=41, 688.974pt x 346.4142pt>
 File: images/combined_explanation.png Graphic file (type png)
 
 <use images/combined_explanation.png>
-Package pdftex.def Info: images/combined_explanation.png used on input line 527
+Package pdftex.def Info: images/combined_explanation.png used on input line 520
 .
 (pdftex.def)             Requested size: 341.43306pt x 171.66849pt.
 
-Underfull \hbox (badness 1817) in paragraph at lines 535--535
+Underfull \hbox (badness 1817) in paragraph at lines 528--528
 []\OT1/cmr/bx/n/9 Fig.2. A. \OT1/cmr/m/n/9 Ex-pla-na-tion for why the query ``\
 OT1/cmr/m/it/9 not \OT1/cmr/bx/n/9 has[]part \OT1/cmr/m/it/9 some \OT1/cmr/m/n/
 9 `fan-shaped
  []
 
 
-Underfull \hbox (badness 5578) in paragraph at lines 535--535
+Underfull \hbox (badness 5578) in paragraph at lines 528--528
 \OT1/cmr/m/n/9 body' '' re-turns `an-ten-nal lobe'. Note that di-rect as-ser-ti
 on of \OT1/cmr/bx/n/9 has[]part
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 535--535
+Underfull \hbox (badness 5563) in paragraph at lines 528--528
 \OT1/cmr/m/n/9 re-stric-tion ax-ioms are not nec-es-sary. \OT1/cmr/bx/n/9 B. \O
 T1/cmr/m/n/9 Ex-pla-na-tion for why the query
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--535
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
 \OT1/cmr/m/n/9 ``neu-ron that (\OT1/cmr/bx/n/9 has[]synaptic[]terminal[]in \OT1
 /cmr/m/it/9 some \OT1/cmr/m/n/9 `an-ten-nal lobe') and not
  []
 
-[8 <./images/combined_explanation.png>] [9]
-Overfull \hbox (1.12477pt too wide) in paragraph at lines 628--636
+<images/expression_pattern_with_neg.png, id=42, 684.5575pt x 170.6375pt>
+File: images/expression_pattern_with_neg.png Graphic file (type png)
+
+<use images/expression_pattern_with_neg.png>
+Package pdftex.def Info: images/expression_pattern_with_neg.png used on input l
+ine 548.
+(pdftex.def)             Requested size: 341.43306pt x 85.11023pt.
+ [8 <./images/combined_explanation.png>] [9 <./images/expression_pattern_with_n
+eg.png>]
+Overfull \hbox (9.26144pt too wide) in paragraph at lines 613--620
+\OT1/cmtt/m/n/10 https : / / github . com / VirtualFlyBrain / VFB _ owl / tree 
+/ master / src / owl$\OT1/cmr/m/n/10 . A test
+ []
+
+
+Overfull \hbox (21.20717pt too wide) in paragraph at lines 613--620
+\OT1/cmr/m/n/10 be found at: $\OT1/cmtt/m/n/10 https : / / github . com / Virtu
+alFlyBrain / VFB _ papers / owl / owled2014 _
+ []
+
+
+Overfull \hbox (1.12477pt too wide) in paragraph at lines 634--642
 \OT1/cmtt/m/n/10 VirtualFlyBrain / VFB _ owl / wiki / Individuals-[]DB$\OT1/cmr
 /m/n/10 ) and pro-gram-mat-i-cally con-
  []
 
 
-Overfull \hbox (46.623pt too wide) in paragraph at lines 628--636
+Overfull \hbox (46.623pt too wide) in paragraph at lines 634--642
 \OT1/cmr/m/n/10 verted to OWL via script-ing over the OWL-API ($\OT1/cmtt/m/n/1
 0 https : / / github . com / VirtualFlyBrain /
  []
 
-
-Overfull \hbox (6.37712pt too wide) in paragraph at lines 649--652
-\OT1/cmr/m/n/10 We thank Si-mon Reeve for his con-tri-bu-tions to the rep-re-se
-n-ta-tion of neu-roanatomy
+[10]
+Overfull \hbox (2.75226pt too wide) in paragraph at lines 660--670
+\OT1/cmr/m/n/10 of Drosophila anatomy and de-vel-op-ment for databases' BBB-SRC
+:BB/G02233X/1
  []
 
-
-Overfull \hbox (7.75226pt too wide) in paragraph at lines 655--666
-\OT1/cmr/m/n/10 of Drosophila anatomy and de-vel-op-ment for databases' ; BBB-S
-RC:BB/G02233X/1
- []
-
-(./VFB_owled2014.bbl [10]) [11] (./VFB_owled2014.aux) ) 
+(./VFB_owled2014.bbl [11]) [12] (./VFB_owled2014.aux) ) 
 Here is how much of TeX's memory you used:
- 2319 strings out of 493117
- 31289 string characters out of 6135433
- 97256 words of memory out of 5000000
- 5742 multiletter control sequences out of 15000+600000
- 12011 words of font info for 46 fonts, out of 8000000 for 9000
+ 2335 strings out of 493117
+ 31639 string characters out of 6135433
+ 97327 words of memory out of 5000000
+ 5756 multiletter control sequences out of 15000+600000
+ 12179 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,26p,605b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,26p,605b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt9.pfb>
-Output written on VFB_owled2014.pdf (11 pages, 932888 bytes).
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt9.pfb>
+Output written on VFB_owled2014.pdf (12 pages, 1043913 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

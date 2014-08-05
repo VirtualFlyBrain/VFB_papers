@@ -1,14 +1,54 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{pmid21129968}
+A.~S. Chiang, C.~Y. Lin, C.~C. Chuang, H.~M. Chang, C.~H. Hsieh, C.~W. Yeh,
+  C.~T. Shih, J.~J. Wu, G.~T. Wang, Y.~C. Chen, C.~C. Wu, G.~Y. Chen, Y.~T.
+  Ching, P.~C. Lee, C.~Y. Lin, H.~H. Lin, C.~C. Wu, H.~W. Hsu, Y.~A. Huang,
+  J.~Y. Chen, H.~J. Chiang, C.~F. Lu, R.~F. Ni, C.~Y. Yeh, and J.~K. Hwang.
+\newblock {{T}hree-dimensional reconstruction of brain-wide wiring networks in
+  {D}rosophila at single-cell resolution}.
+\newblock {\em Curr. Biol.}, 21(1):1--11, Jan 2011.
 
 \bibitem{Costa2013}
 Marta Costa, Simon Reeve, Gary Grumbling, and David Osumi-Sutherland.
 \newblock {The Drosophila anatomy ontology.}
-\newblock {\em Journal of biomedical semantics}, 4(1):32, January 2013.
+\newblock {\em Journal of Biomedical Semantics}, 4(1):32, January 2013.
+
+\bibitem{pmid22205518}
+A.~del Valle~Rodriguez, D.~Didiano, and C.~Desplan.
+\newblock {{P}ower tools for gene expression and clonal analysis in
+  {D}rosophila}.
+\newblock {\em Nat. Methods}, 9(1):47--55, Jan 2012.
+
+\bibitem{pmid24559671}
+K.~Ito, K.~Shinomiya, M.~Ito, J.~D. Armstrong, G.~Boyan, V.~Hartenstein,
+  S.~Harzsch, M.~Heisenberg, U.~Homberg, A.~Jenett, H.~Keshishian, L.~L.
+  Restifo, W.~Rossler, J.~H. Simpson, N.~J. Strausfeld, R.~Strauss, and L.~B.
+  Vosshall.
+\newblock {{A} systematic nomenclature for the insect brain}.
+\newblock {\em Neuron}, 81(4):755--765, Feb 2014.
+
+\bibitem{pmid23063364}
+A.~Jenett, G.~M. Rubin, T.~T. Ngo, D.~Shepherd, C.~Murphy, H.~Dionne, B.~D.
+  Pfeiffer, A.~Cavallaro, D.~Hall, J.~Jeter, N.~Iyer, D.~Fetter, J.~H.
+  Hausenfluck, H.~Peng, E.~T. Trautman, R.~R. Svirskas, E.~W. Myers, Z.~R.
+  Iwinski, Y.~Aso, G.~M. DePasquale, A.~Enos, P.~Hulamm, S.~C. Lam, H.~H. Li,
+  T.~R. Laverty, F.~Long, L.~Qu, S.~D. Murphy, K.~Rokicki, T.~Safford, K.~Shaw,
+  J.~H. Simpson, A.~Sowell, S.~Tae, Y.~Yu, and C.~T. Zugates.
+\newblock {{A} {G}{A}{L}4-driver line resource for {D}rosophila neurobiology}.
+\newblock {\em Cell Rep}, 2(4):991--1001, Oct 2012.
 
 \bibitem{kazakov2012elk}
 Yevgeny Kazakov, Markus Kr{\"o}tzsch, and Franti{\v{s}}ek Siman{\v{c}}{\'\i}k.
 \newblock Elk reasoner: Architecture and evaluation.
 \newblock {\em CEUR Workshop Proceedings}, 858, 2012.
+
+\bibitem{Manton2014}
+James~D. Manton, Aaron~D. Ostrovsky, Lea Goetz, Marta Costa, Torsten Rohlfing,
+  and Gregory S. X.~E. Jefferis.
+\newblock Combining genome-scale drosophila 3d neuroanatomical data by bridging
+  template brains.
+\newblock {\em bioRxiv}, 2014.
 
 \bibitem{pmid22180411}
 N.~Milyaev, D.~Osumi-Sutherland, S.~Reeve, N.~Burton, R.~A. Baldock, and J.~D.
@@ -21,6 +61,20 @@ D.~Osumi-Sutherland, S.~Reeve, C.~J. Mungall, F.~Neuhaus, A.~Ruttenberg, G.~S.
   Jefferis, and J.~D. Armstrong.
 \newblock {{A} strategy for building neuroanatomy ontologies}.
 \newblock {\em Bioinformatics}, 28(9):1262--1269, May 2012.
+
+\bibitem{HermiT2008}
+Rob Shearer, Boris Motik, and Ian Horrocks.
+\newblock {HermiT}: A highly-efficient owl reasoner.
+\newblock In {\em Proc.\ of the 5th Int.\ Workshop on OWL Experiences and
+  Directions (OWLED 2008)}, volume 432 of {\em CEUR
+  (\url{http://ceur-ws.org/})}, 2008.
+
+\bibitem{Fact2006}
+Dmitry Tsarkov and Ian Horrocks.
+\newblock {FaCT}++ description logic reasoner: System description.
+\newblock In {\em Proc.\ of the Int.\ Joint Conf.\ on Automated Reasoning
+  (IJCAR~2006)}, volume 4130 of {\em Lecture Notes in Artificial Intelligence},
+  pages 292--297. Springer, 2006.
 
 \bibitem{ZNCH14a}
 Yujiao Zhou, Yavor Nenov, Bernardo {Cuenca Grau}, and Ian Horrocks.
