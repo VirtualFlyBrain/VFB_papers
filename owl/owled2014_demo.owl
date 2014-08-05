@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/setup/ontologies/2014/6/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/setup/ontologies/2014/6/untitled-ontology-4"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.virtualflybrain.org/owl/owled2014_demo.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac -->
+
+    <owl:ObjectProperty rdf:about="http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has_part</rdfs:label>
+        <owl:inverseOf rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <rdfs:subPropertyOf rdf:resource="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9 -->
+
+    <owl:ObjectProperty rdf:about="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">part_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6 -->
+
+    <owl:ObjectProperty rdf:about="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac"/>
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6"/>
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac"/>
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521 -->
+
+    <owl:ObjectProperty rdf:about="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521">
+        <rdfs:label xml:lang="en">has_synaptic_terminal_in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://virtualflybrain.org/test/8dc4bf1b_c596_412a_a5a6_97179e039da6"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521"/>
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac"/>
+            <rdf:Description rdf:about="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://virtualflybrain.org/test/027a097c_4b4a_463a_ad75_9e2467bd41c9 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/027a097c_4b4a_463a_ad75_9e2467bd41c9">
+        <rdfs:label xml:lang="en">neuron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/2899db4b_aae0_4fa4_85b2_2ae38db413af -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/2899db4b_aae0_4fa4_85b2_2ae38db413af">
+        <rdfs:label xml:lang="en">tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5">
+        <rdfs:label xml:lang="en">neuropil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/516143dd_da19_4472_bf39_a6ebe183e9f8 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/516143dd_da19_4472_bf39_a6ebe183e9f8">
+        <rdfs:label xml:lang="en">fan-shaped body</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a">
+        <rdfs:label xml:lang="en">central complex</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/72cb6ad3_9442_42b5_970f_b64fa5065ff6 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/72cb6ad3_9442_42b5_970f_b64fa5065ff6">
+        <rdfs:label xml:lang="en">DL1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/7d17859a_b8f2_418c_b857_5c6cce84e960 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/7d17859a_b8f2_418c_b857_5c6cce84e960">
+        <rdfs:label xml:lang="en">iACT</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2899db4b_aae0_4fa4_85b2_2ae38db413af"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68">
+        <rdfs:label xml:lang="en">mushroom body</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/c785aebe_74e2_4b9d_bb18_c12fbef59731 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/c785aebe_74e2_4b9d_bb18_c12fbef59731">
+        <rdfs:label xml:lang="en">great commissure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2899db4b_aae0_4fa4_85b2_2ae38db413af"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/cb1d6641_84e8_41df_b38d_b86496c3070b -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/cb1d6641_84e8_41df_b38d_b86496c3070b">
+        <rdfs:label xml:lang="en">DL1 adPN</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/027a097c_4b4a_463a_ad75_9e2467bd41c9"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/1e3bfb9a_82fb_4285_ae05_960b7559f4ac"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://virtualflybrain.org/test/72cb6ad3_9442_42b5_970f_b64fa5065ff6"/>
+                                    <rdf:Description rdf:about="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/a55ce327_ad86_4fc5_b147_3fe81a9be521"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/72cb6ad3_9442_42b5_970f_b64fa5065ff6"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829">
+        <rdfs:label xml:lang="en">antennal lobe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549">
+        <rdfs:label xml:lang="en">lateral horn</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://virtualflybrain.org/test/fc931f27_cee9_4ba1_901f_8315cff03449 -->
+
+    <owl:Class rdf:about="http://virtualflybrain.org/test/fc931f27_cee9_4ba1_901f_8315cff03449">
+        <rdfs:label xml:lang="en">mushroom body calyx</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://virtualflybrain.org/test/2bace5b7_2b9d_45d1_8cee_b574002bcde5"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/5f72cf9b_71df_4c04_a893_b72249579c1a"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/ea5ca33b_961f_465f_94e4_0534c11b0829"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+                <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/f5f2dc5c_f431_4194_ab8a_04ee3c3e7549"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <owl:onProperty rdf:resource="http://virtualflybrain.org/test/8c58aeae_67d0_4a3d_8280_af06594268a9"/>
+        <owl:someValuesFrom rdf:resource="http://virtualflybrain.org/test/be85f8c2_74e3_4ea4_bce3_cc2d57a70e68"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
