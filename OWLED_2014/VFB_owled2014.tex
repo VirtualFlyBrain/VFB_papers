@@ -118,10 +118,10 @@ function. New microscopy and image analysis techniques are
 facilitating the collection and integration of the massive 3D image
 data sets required to map the structure and connectivity of the
 nervous system down to the single neuron level
-[\cite{pmid21129968,Manton2014} New genetic
+\cite{pmid21129968,Manton2014}. New genetic
 techniques allow researchers to precisely target elements of the
 neural circuitry to inhibit or activate it in order assess the effects
-of nervous system function and behaviour \cite{pmid22205518}. The scale of this 
+on nervous system function and behaviour \cite{pmid22205518}. The scale of this 
 effort, and the huge volumes of data involved, mean that its success
 depends on suitable informatics support. Virtual Fly Brain (VFB)
 \cite{pmid22180411,pmid22402613} is an OWL-based, open source
@@ -148,7 +148,7 @@ provides a means to integrate qualitative and quantitative data into a
 queryable whole.
 
 Modulating the activity of specific neuron classes requires finding
-reagents whose expression sufficiently specific. Finding such reagents
+reagents whose expression is sufficiently specific. Finding such reagents
 frequently requires mining 3D image data of expression patterns.
 Integrating the phenotypic results of modulating neuronal activity
 into the bigger picture of nervous system function requires ways to
@@ -160,7 +160,7 @@ queryable form.
 
 \subsection{Virtual Fly Brain}
 
-\subsubsection{The Drosophila anatomy ontology}
+\subsubsection{The Drosophila anatomy ontology.}
 
 Virtual Fly Brain is built around the \textit{Drosophila} anatomy
 ontology (DAO) \cite{Costa2013}, an OWL ontology of
@@ -177,7 +177,7 @@ Equivalent Class axioms.  This axiomatisation infers almost 50\% of
 \textgreater 10,000 classifications and allows a rich variety of
 biologically interesting queries.
 
-\subsubsection{Annotation queries}
+\subsubsection{Annotation queries.}
 
 One major usage of VFB is as a means to query for expression of genes,
 transgenes and phenotypes in specified anatomical classes.  These
@@ -189,7 +189,7 @@ used to query the FlyBase SQL database of annotations.  10's of
 thousands of annotations are available from these queries.
 
 
-\subsubsection{OWL queries and design patterns for neuroanatomy}
+\subsubsection{OWL queries and design patterns for neuroanatomy.}
 
 The DAO uses an integrated set of relations and design patterns to
 classify neurons according to their location, connectivity, lineage
@@ -263,24 +263,22 @@ For example:
 \end{quote}
 
 VFB also provides combinatorial query functionality, via its
-query builder tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}}
+query builder
+tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}},
 allowing users to query for neurons based on their pattern of
 synapsing.  This functionality is currently limited to query legs
-combined with`\textit {and}', and does not support negation.
-
-%% Decide whether this is needed:
-%fasciculates\_with lacks such axioms, as fasciculation specifically
-%requires bundle formation (see common logic in supplementary material
-%for Osumi-Sutherland et al., 2014 for details.)
+combined with `\textit {and}', and does not support negation.
+(See Osumi-Sutherland et al., 2014 for details.)
 
 \begin{figure}
 \centering
 \includegraphics[width=120mm]{images/Query_menus_DL_images.png}
 \caption{VFB query menus (left) with the DL queries they run (right).  The top panel
-  show nested queries for classes of neurons based on overlaps and its
+  shows nested queries for classes of neurons based on \textbf{overlaps} and its
   subproperties.  Each of these queries returns classes based on
   assertions further down the partonomy than the query term.  The
-  bottom panel show queries for individual neurons with and without clustering. }
+  bottom panel show queries for individual neurons with and without
+  clustering.  A 3D cluster image is shown on the bottom right. }
 \label{fig:Query_menus_DL_images}
 \end{figure}
 
@@ -312,7 +310,7 @@ standard brain. This allows direct comparison - both automated and
 manual  - of registered images.
 
 From image analysis, we can determine which gross brain regions a
-neuron, clone or expression pattern \textit{overlaps}, recording this
+neuron, clone or expression pattern \textbf{overlaps}, recording this
 using a \textit{Type} statement on the individual.  These axioms drive queries for
 single neuron images by location (figure
 \ref{fig:Query_menus_DL_images}). A more sophisticated form of image
@@ -349,19 +347,19 @@ To formalise what we mean by expression pattern, we first define a
 relation, expresses:
 
 \begin{quote}
-x \textbf{expresses} y iff:  x \textbf{has\_part} \textit{some} cell \textit{and}
-for all cell(c) and \textbf{part\_of} y: (`gene expression'
-\textit{and} \textbf{has\_product} \textit{some} y)
-\textbf{occurs\_in} c  % Would be better if this were in common logic!
+\textbf{expresses}
+...
+% Would be better if this were in common logic!  And what is y?
 \end{quote}
 
-We use this relation to record expression depicted in all types of
-images, including those of single neurons and neuron clones as well as
-expression patterns. Images of single neurons and neuron clones
-typically depict only fragments of expression patterns.  To keep these
-separable from images of complete expression patterns, we define
-expression pattern itself as an anatomical class consisting of the 
-mereological sum of all cells that express a particular gene or
+
+We use this relation to record expression in any type of cell or
+multicellular anatomical entity including single neurons, neuron
+clones and complete expression patterns.  Images of single neurons and neuron clones typically depict only
+fragments of expression patterns.  To keep these
+separable from images of complete expression patterns, we define an
+expression pattern as an anatomical entity consisting of mereological
+sum of all cells that express a particular gene or
 transgene.  This is axiomatised using the following pattern:
 
 \begin{quote}
@@ -379,13 +377,13 @@ SQL to OWL.
 
 For brain regions:
 
-`expression pattern of X' \textbf{overlaps} \textit{some} `brain
-region Y'  (see \ref{fig:exp_pat_neg} for an example)
+\begin{quote}`expression pattern of X' \textbf{overlaps} \textit{some} `brain
+region Y'  (see \ref{fig:exp_pat_neg} for an example)\end{quote}
 
 For cells, we can make a stronger assertion:
 
-`expression pattern of X'
-\textbf{has\_part}\footnote{\textbf{has\_part} entails \textbf{overlaps}} \textit{some} `cell Y'
+\begin{quote}`expression pattern of X'
+\textbf{has\_part}\footnote{\textbf{has\_part} entails \textbf{overlaps}} \textit{some} `cell Y' \end{quote}
 
 We can then find anatomical structures in which there is some
 expression via ``\textbf{overlaps} \textit{some} X''
@@ -434,7 +432,7 @@ But if we also have the axioms:
 \begin{quote}
 `DL1 adPN' \textit{subClassOf} \textbf{fasciculates\_with} \textit{only} mALT
 
-'great commissure' \textit{disjointWith} mALT
+`great commissure' \textit{disjointWith} mALT
 \end{quote}
 
 Then we can find 'DL1 adPN' with the query:
@@ -466,7 +464,7 @@ Z \textit{disjointWith} X
 
 We can get around this by using closure axioms of the form
 ``\textbf{rel} \textit{only} (\textbf{has\_part} some X)'' and declaring spatial
-disjointness between brain regions (which also provide a useful
+disjointness between brain regions (which also provides a useful
 integrity check). Spatial disjointness can be declared using a simple
 GCI:
 
@@ -475,7 +473,7 @@ GCI:
 \end{quote}
 
 For example, we can represent that the neuron DL1 adPN only has
-synaptic terminals in DL1v(part of the antennal lobe) and the lateral
+synaptic terminals in DL1 (part of the antennal lobe) and the lateral
 horn\footnote{There is  actually one additional region, but we
   simplify here in order to  provide a more compact example} with:
 
@@ -522,7 +520,7 @@ This pattern is also dependent on the reflexive nature of
 \caption{\textbf{A.} Explanation for why the query ``\textit{not}
    \textbf{has\_part} \textit{some} `fan-shaped body' '' returns
    `antennal lobe'.  Note that direct assertion of \textbf{has\_part}
-   restriction axioms are not necessary. \textbf{B.} Explanation for
+   restriction axioms is not necessary. \textbf{B.} Explanation for
    why the query ``neuron that (\textbf{has\_synaptic\_terminal\_in}
    \textit{some} `antennal lobe') and not
    (\textbf{has\_synaptic\_terminal\_in} \textit{some} `fan-shaped
@@ -534,8 +532,8 @@ Negative query legs in compound queries for expression patterns would
 be especially useful to our users.  Our ability to provide these is
 limited by the extent to which it is possible to specify which regions
 lack expression.  It is generally not possible to provide an
-exhaustive list of all regions that have some part with some significant level of
-expression for a closure axiom with overlaps.  However some datasets
+exhaustive list of all regions lacking
+expression to use to define a closure axiom.  However some datasets
 come with explicit assertions about regions not overlapped.  For
 example, the largest transgene expression dataset that VFB currently
 hosts \cite{pmid23063364} was provided with annotations recording the
@@ -576,9 +574,12 @@ axiomatisation allowing inference over partonomy drives queries that
 
 
 VFB has so far avoided taking advantage of the full expressiveness of
-OWL.  Reasoners such as HermiT\cite{HermiT2008} and FaCT++ \cite{Fact2006}  are many orders of
-magnitude slower at classifying the DAO and answering queries than
-ELK, the EL reasoner that we rely on.  They do not even complete when
+OWL. Restricting expressiveness to the EL profile allows us to use the
+ELK reasoner, which gives classification and query
+answering times of < 500ms with our ontology and
+knowledgeBase. Reasoners such as HermiT\cite{HermiT2008} and FaCT++
+\cite{Fact2006}  are many orders of magnitude slower at classifying
+the DAO and answering queries.  They do not even complete when
 reasoning across the DAO combined with the VFB knowledgeBase of
 individuals.  However, we have one use case for which DL
 expressiveness would be extremely useful: compound queries for neurons
