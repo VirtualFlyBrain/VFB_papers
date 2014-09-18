@@ -155,7 +155,7 @@ into the bigger picture of nervous system function requires ways to
 keep track of the phenotypes associated with modulating the neuronal
 activity of connected neurons.  Annotation with OWL ontology terms -
 either semi-formalised in a database or fully formalised in an OWL
-knowledgeBase provides a means of storing this information in
+knowledgebase provides a means of storing this information in
 queryable form.
 
 \subsection{Virtual Fly Brain}
@@ -175,7 +175,15 @@ regions. The DAO is also richly formalised, using 44 object properties
 in \textgreater 17000 Subclassing axioms and \textgreater 2000
 Equivalent Class axioms.  This axiomatisation infers almost 50\% of
 \textgreater 10,000 classifications and allows a rich variety of
-biologically interesting queries.
+biologically interesting queries. In order to keep reasoning
+tractable, expressiveness is kept almost entirely within the EL
+profile of OWL\footnote{We stray outside the EL
+  profile with inverse objectProperty declarations. To our
+  knowledge, and based on extensive testing, these have no effect on classification and query
+  answering with our current axiomatisation.}, allowing us to use the fast reasoner ELK \cite{kazakov2012elk}.
+Classification of the ontology is complete in under 500ms.  Query
+answering  time, taking advantage of incremental reasoning via ELK, is
+in the 10s of ms range.
 
 \subsubsection{Annotation queries.}
 
@@ -268,7 +276,7 @@ tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}},
 allowing users to query for neurons based on their pattern of
 synapsing.  This functionality is currently limited to query legs
 combined with `\textit {and}', and does not support negation.
-(See Osumi-Sutherland et al., 2014 for details.)
+(See \cite{pmid22402613} for details.)
 
 \begin{figure}
 \centering
@@ -347,16 +355,19 @@ To formalise what we mean by expression pattern, we first define a
 relation, expresses:
 
 \begin{quote}
-\textbf{expresses}
-...
-% Would be better if this were in common logic!  And what is y?
+\textbf{expresses}: This relation holds between an anatomical entity (a)
+and a gene or transgene (g) where the anatomical entity is either a cell
+or has cells as a part and in all of those cells, some instance of GO:gene
+expression that has input g is occuring.
+% Would be better if this were in common logic! But what is g? Might make sense if g
+% was a GDC, but hard to explain that here.
 \end{quote}
 
 
 We use this relation to record expression in any type of cell or
 multicellular anatomical entity including single neurons, neuron
-clones and complete expression patterns.  Images of single neurons and neuron clones typically depict only
-fragments of expression patterns.  To keep these
+clones and complete expression patterns.  Images of single neurons and
+neuron clones typically depict only fragments of expression patterns.  To keep these
 separable from images of complete expression patterns, we define an
 expression pattern as an anatomical entity consisting of mereological
 sum of all cells that express a particular gene or
@@ -370,7 +381,14 @@ B'\end{quote}
 \textbf{part\_of} \textit{some} `B expression pattern'
 \end{quote}
 
-This system is currently used on VFB to provide images of transgene
+
+Classification time for the full ontology combined with the
+knowledgebase (> 21,000 expression patterns, clones and neurons) is  ~
+1500ms.  DL query answering time, taking advantage of incremental
+reasoning with ELK, is under 100ms.
+
+Representation of expression patterns in the knowledgebase is
+currently used on VFB to provide images of transgene
 expression patterns found via SQL queries. The above formalisation
 provides an obvious way to convert the semi-formalised annotations in
 SQL to OWL.
@@ -378,7 +396,7 @@ SQL to OWL.
 For brain regions:
 
 \begin{quote}`expression pattern of X' \textbf{overlaps} \textit{some} `brain
-region Y'  (see \ref{fig:exp_pat_neg} for an example)\end{quote}
+region Y'  (see figure \ref{fig:exp_pat_neg} for an example)\end{quote}
 
 For cells, we can make a stronger assertion:
 
@@ -389,7 +407,7 @@ We can then find anatomical structures in which there is some
 expression via ``\textbf{overlaps} \textit{some} X''
 
 As discussed in the next section, this formalisation can be used to as
-part of a pattern that allows safe queries for expression patterns involving negation.
+part of a pattern that allows safe queries for expression patterns involving negation..
 
 \section{Beyond EL: supporting queries with negation.}
 
