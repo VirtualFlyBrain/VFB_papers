@@ -115,13 +115,13 @@ compatible with the mereological reasoning used in VFB.
 A massive effort is underway to map the neural circuitry of the
 \textit{Drosophila} nervous system and to genetically dissect its
 function. New microscopy and image analysis techniques are
-facilitating the collection and integration of the massive 3D image
+facilitating the collection and integration of the large 3D image
 data sets required to map the structure and connectivity of the
 nervous system down to the single neuron level
 \cite{pmid21129968,Manton2014}. New genetic
-techniques allow researchers to precisely target elements of the
-neural circuitry to inhibit or activate it in order assess the effects
-on nervous system function and behaviour \cite{pmid22205518}. The scale of this 
+techniques allow researchers to precisely inhibit or activate elements of the
+neural circuitry it in order assess the effects
+on function and behaviour \cite{pmid22205518}. The scale of this 
 effort, and the huge volumes of data involved, mean that its success
 depends on suitable informatics support. Virtual Fly Brain (VFB)
 \cite{pmid22180411,pmid22402613} is an OWL-based, open source
@@ -129,25 +129,25 @@ resource dedicated to this role. Usage is growing rapidly among the community
 it serves.  The site currently gets 15-20,000 page views per month.
 
 The adult \textit{Drosophila} nervous system contains an estimated
-200,000 neurons.  These can be grouped into classes that share
-similar location, morphology and lineage.  As there are multiple
-members of many of these classes per brain, the number of such classes
+200,000 neurons.  These can be grouped into classes that share characteristics such as
+similar lineage, morphology and location.  As each class is expected to contain multiple
+members, the number of such classes
 is likely to be at least an order of magnitude smaller than the number
 of neurons.  Mapping the neural circuitry of \textit{Drosophila}
 requires ways to track the classification of these neurons and their
 properties, including their relationships to each other and to the
 gross anatomy of the nervous system, musculature, sense organs and
-neuro-endocrine system.  This work requires synthesis of many of
+neuro-endocrine system.  This work requires the synthesis of many
 qualitative assertions from the literature and its integration with
 information from bulk data sources, much of it quantitative.  OWL
 is an ideal technology for building and maintaining these queryable
-classifications. There will always be a need for direct mathematical
-access to quantitative data.  But if suitable cutoffs can be
+classifications. Although there will always be a need for direct mathematical
+access to quantitative data, if suitable cutoffs can be
 chosen to make qualitative assertions from quantitative data, OWL
 provides a means to integrate qualitative and quantitative data into a
 queryable whole.
 
-Modulating the activity of specific neuron classes requires finding
+Modulating the activity of particular neuron classes requires finding
 reagents whose expression is sufficiently specific. Finding such reagents
 frequently requires mining 3D image data of expression patterns.
 Integrating the phenotypic results of modulating neuronal activity
@@ -168,7 +168,7 @@ ontology (DAO) \cite{Costa2013}, an OWL ontology of
 devoted to representing neuroanatomy. The DAO is largely manually
 curated from the literature and includes a large textual component in
 the form of referenced synonym lists and definitions/descriptions -
-making it searchable by and accessible to biologists.  These are used
+making it searchable by and accessible to biologists.  These synonyms are used
 to drive auto-suggestion based searching on VFB and to populate term
 information pages for specific neuron classes and nervous system
 regions. The DAO is also richly formalised, using 44 object properties
@@ -190,7 +190,7 @@ in the 10s of ms range.
 One major usage of VFB is as a means to query for expression of genes,
 transgenes and phenotypes in specified anatomical classes.  These
 queries use information curated from the literature and bulk data sets
-by VFB and FlyBase curators using an semi-formalised tagging
+by VFB and FlyBase curators using a semi-formalised tagging
 system. All queries of these annotations start with a query for
 subclasses, parts and overlapping cells.  The resulting list is then
 used to query the FlyBase SQL database of annotations.  10's of
@@ -257,7 +257,7 @@ Typically, \textbf{overlaps} is too abstract to be directly useful in
 class restrictions. Instead we use a range of subproperties of
 \textbf{overlaps} that record something useful about the nature of the
 overlap, such as which tract(s) a neuron fasciculates with and which
-neuropils it form synapses in.  Like \textbf{overlaps}, relations
+neuropils it forms synapses in.  Like \textbf{overlaps}, relations
 recording synaptic terminal location also propagate over partonomy via
 property chains, allowing queries from any level of the partonomy.
 For example:
@@ -272,7 +272,8 @@ For example:
 
 VFB also provides combinatorial query functionality, via its
 query builder
-tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}},
+tool\footnote{\url{http://www.virtualflybrain.org/site/tools/query_builder/}}
+,
 allowing users to query for neurons based on their pattern of
 synapsing.  This functionality is currently limited to query legs
 combined with `\textit {and}', and does not support negation.
@@ -286,7 +287,7 @@ combined with `\textit {and}', and does not support negation.
   subproperties.  Each of these queries returns classes based on
   assertions further down the partonomy than the query term.  The
   bottom panel show queries for individual neurons with and without
-  clustering.  A 3D cluster image is shown on the bottom right. }
+  clustering.  A 3D rendering of a cluster is shown on the bottom right. }
 \label{fig:Query_menus_DL_images}
 \end{figure}
 
@@ -295,8 +296,8 @@ combined with `\textit {and}', and does not support negation.
 Neurobiology is a very visual subject.  While it is useful to read
 both informal and formal descriptions of neuron classes and brain
 regions, there is no substitute for being able to see images of them.
-VFB is built around a standard, 3D adult brain image.  Major brain
-regions are defined as 3D painted regions on this image according to
+VFB is built around a standard 3D adult brain template.  Major brain
+regions are defined as 3D painted regions on this template according to
 an expert-defined standard \cite{pmid24559671}.  These regions are modelled as
 individual members of the relevant ontology classes, but are also
 related to brain region classes via an axiom of the form:
@@ -350,6 +351,7 @@ A key aim of VFB is to provide a means for biologists to find
 candidate transgenes suitable for use in genetic dissection of nervous
 system function. This is aided immensely by providing images of the
 expression patterns found.
+%Last sentence is confusing. 'This' what? 'found' by whom?
 
 To formalise what we mean by expression pattern, we first define a
 relation, expresses:
@@ -407,7 +409,7 @@ We can then find anatomical structures in which there is some
 expression via ``\textbf{overlaps} \textit{some} X''
 
 As discussed in the next section, this formalisation can be used to as
-part of a pattern that allows safe queries for expression patterns involving negation..
+part of a pattern that allows safe queries for expression patterns involving negation.
 
 \section{Beyond EL: supporting queries with negation.}
 
@@ -431,8 +433,8 @@ already supports.  For some transgene expression
 patterns in the adult brain, we have both negative and positive
 assertions about where a transgene is expressed.  It would be very
 useful for researchers to be able to add negative clauses to queries for
-expression as this can be critical for finding sufficiently
-specific reagents to use to modulate the activity of specific neurons
+expression as this can be critical for choosing
+specific reagents that can be used to modulate the activity of particular neurons
 to assess their function.
 
 The most efficient way to support queries involving negation is to
@@ -442,7 +444,7 @@ mALT.  We currently record this as:
 
 
 \begin{quote}
-`DL1 adPN' \textit{subClassOf} \textbf{fascicualtes\_with} \textit{some} mALT
+`DL1 adPN' \textit{subClassOf} \textbf{fasciculates\_with} \textit{some} mALT
 \end{quote}
 
 But if we also have the axioms:
@@ -615,9 +617,9 @@ patterns outlined in this paper.
 A more clearly surmountable barrier is the lack of tooling support for
 some of the axiomatisation required in the design patterns we propose.  In
 particular, adding GCIs to record spatial disjointness is currently
-very tedious to do by hand in Protege 5.  This may be achievable by
+very tedious to do by hand in Protege 5.  This may be accomplished by
 scripting, but in order for the approach to be accessible for any
-ontology builder this would ideally be achievable via a plugin for a
+ontology builder this would ideally be achieved via a plugin for a
 popular editor such as Protege.  By analogy with support for the
 addition of class disjointness axioms in Protege, this could work by allowing
 users to navigate down a partonomy tree, adding disjointness axioms to
@@ -665,7 +667,7 @@ non-proprietary alternatives.
 The OWL design patterns and queries presented in this paper were designed and
 tested by DOS  He also designed the database representation of OWL
 individuals and wrote the code the translates this representation into
-OWL. DOS, MC, and RC all contrubuted to the representation of
+OWL. DOS, MC, and RC all contributed to the representation of
 neuroanatomy in the  DAO.  MC  was also responsible for annotation of
 individual neurons in the VFB knowldgeBase.
 
@@ -681,7 +683,7 @@ This work was largely supported by:`Standardising the representation of
 Drosophila anatomy and development for databases' 
 BBBSRC:BB/G02233X/1 awarded 2009 to J.Douglas Armstrong, Michael 
 Ashburner, Cahir O'Kane and David Osumi-Sutherland;  An Isaac Newton
-Trust grant to Cahir O'Kane to fund the work of Marta Costa, Awarded
+Trust grant to Cahir O'Kane to fund the work of Marta Costa, awarded
 2012:`Neuroinformatic identification of new types of neuron in the
 Drosophila brain.' VFB is currently supported by a Wellcome Trust
 grant to Cahir O'Kane, J. Douglas Armstrong, Gregory S.X.E Jefferis,
